@@ -27,3 +27,5 @@ When more is completed, a binary will be released. In themean time, I'm trying t
 I've tried it with g++ on Cygwin and Visual Studio 2022 (or more like the "cl" compiler that comes with it - VS will likely yell at you about strcp being used).
 
 Just use "g++ -o main.exe main.cpp" or "cl main.cpp", then execute main.exe.
+
+Note that if you build it with Cygwin, all accounts using it must wither call it theough Cygwin or have Cygwin in their %PATH% variable. This is the only reason I even gave VS a try... and it was not a great experience.
