@@ -2,7 +2,7 @@
 Creating the “System Call” shell as seen in Sword Art Online: Alicization.
 
 # Usage
-Type "System Call:" then one of the following: generate, destroy, inspect, execute, or enhance armament. A list of options will be made available when tey are implemented. It might take you a lifetime to figure outbhow to find it, though :)
+Type "System Call:" then one of the following: generate, destroy, inspect, execute, or enhance armament. A list of options will be made available when they are implemented. It might take you a lifetime to figure outbhow to find it, though :)
 
 Enhance Armament will elevate priveleges to Admin. Enhance Armament: Release Recollection will go to either System or TrustedInstaller - whichever people find more useful is the one I'll use.
 
