@@ -28,4 +28,4 @@ I've tried it with g++ on Cygwin and Visual Studio 2022 (or more like the "cl" c
 
 Just use "g++ -o main.exe main.cpp" or "cl main.cpp", then execute main.exe.
 
-Note that if you build it with Cygwin, all accounts using it must wither call it theough Cygwin or have Cygwin in their %PATH% variable. This is the only reason I even gave VS a try... and it was not a great experience.
+Note that if you build it with Cygwin, all accounts using it must either call it through Cygwin or have the Cygwin files in their %PATH% variable. This is the only reason I even gave VS a try... and it was not a great experience.
