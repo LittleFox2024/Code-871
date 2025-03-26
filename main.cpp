@@ -12,6 +12,7 @@ Aniplex USA.
 #include <cctype>
 #include "misc.h"
 #include "syscall.h"
+
 using namespace std;
 
 
@@ -22,6 +23,10 @@ int executeCommand(string&);
 
 //Main
 int main(){
+
+    //Welcome
+    cout << "Welcome to the Underworld!" << endl;
+    
     string inputCommand = "";
     string exitCommand = "exit";
     cout << ">";
