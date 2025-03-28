@@ -25,10 +25,10 @@ The colons are required, and there should be only one space between words.
 In addition to System Call, I might add some Goddes/God calls. Ex: "Solace:", "Stacia:", "Terraria:", or "Vecta:". These commands will be very powerful, if implemented. Be careful with Vecta's though. 
 
 # Compiling
-When more is completed, a binary will be released. In themean time, I'm trying to make this portable and use standard libraries. This is not a hard rule and may likely change.
+When more is completed, a binary will be released. In the mean time, I'm trying to make this portable and use standard libraries. This is not a hard rule and may likely change.
 
 I've tried it with g++ on Cygwin and Visual Studio 2022 (or more like the "cl" compiler that comes with it - VS will likely yell at you about strcp being used).
 
 Just use "g++ -o main.exe main.cpp" or "cl main.cpp", then execute main.exe.
 
-Note that if you build it with Cygwin, all accounts using it must either call it through Cygwin or have the Cygwin files in their %PATH% variable. This is the only reason I even gave VS a try... and it was not a great experience.
+Note that if you build it with Cygwin, all accounts using it must either call it through Cygwin or have the Cygwin files in their %PATH% variable. This is the only reason I even gave VS a try... and it was not a great experience. Cygwin build will also is "sh" for execution, while cl will use "cmd".
