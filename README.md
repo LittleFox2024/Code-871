@@ -11,7 +11,6 @@ The colons are required, and there should be only one space between words.
 1. Main file:
   - None
 3. Execute command:
-  - Make sure this works right. I've got the code but haven't uploaded it yet.
   - Ensure its secure
 3. Generate:
   - Figure out how to create a file like Linux "touch"
@@ -23,6 +22,7 @@ The colons are required, and there should be only one space between words.
 
 # Ideas I may Implement
 In addition to System Call, I might add some Goddes/God calls. Ex: "Solace:", "Stacia:", "Terraria:", or "Vecta:". These commands will be very powerful, if implemented. Be careful with Vecta's though. 
+Alteratively, or in addition, whichever, maybe "Cardinal:" commands. For example, change "exit" to "Cardinal: Log Out".
 
 # Compiling
 When more is completed, a binary will be released. In the mean time, I'm trying to make this portable and use standard libraries. This is not a hard rule and may likely change.
