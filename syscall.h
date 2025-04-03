@@ -82,6 +82,8 @@ int executeSysCall(string& fullCommand){
         found = true;
         cout << "Enhancing Armament" << endl;
         startPosition = 29;
+        commandToSend = fullCommand.substr(startPosition, length);
+        enhanceArmament(commandToSend);
     }
     
     if(found == false){
@@ -91,7 +93,8 @@ int executeSysCall(string& fullCommand){
 }
 
 
-int enhanceArmament(){
+int enhanceArmament(string& commandToSend){
+    checkEnhancement(commandToSend);
     return 0;
 }
 

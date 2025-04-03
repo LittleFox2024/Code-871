@@ -1,7 +1,6 @@
 /*
 This is a shell for Windows based off of the "System Call" functionality in
 Sword Art Online: Alicization.
-
 This is a fan made project. Sword Art Online is owned by Reki Kawahara, A-1 Pictures and
 Aniplex USA.
 */
@@ -12,6 +11,7 @@ Aniplex USA.
 #include <cctype>
 #include "misc.h"
 #include "syscall.h"
+#include "cardcall.h"
 
 using namespace std;
 
@@ -27,12 +27,15 @@ int main(){
     //Welcome
     cout << "Welcome to the Underworld!" << endl;
     while(true){
+        //Variables
         string inputCommand = "";
+        //Constants
         string exitCommand = "exit";
         string exactMatch = "System Call:";
-        cout << ">";
-        getline(cin, inputCommand);
-    
+        cout << ">"; //Prompt
+        getline(cin, inputCommand); //Get input
+        
+        //Compare input to the constants
         if (!(compareStrings(inputCommand, exitCommand))){
             if (!(compareStrings(inputCommand, exactMatch))){
                 executeCommand(inputCommand);
@@ -53,14 +56,27 @@ int executeCommand(string& command){
 //Contains code to execute commands
     //Create string for comparison
     string sysCallString;
+    bool found = false;
+    //Strings to compare
     string SYSCALL = "System Call:";
+    string CARDCALL = "Cardinal::";
+    //Get substring
     sysCallString = command.substr(0, 12);
+    //Comparisons
     if (compareStrings(sysCallString, SYSCALL)){
         cout << "System Call!!!" << endl;
+        found = true;
         executeSysCall(command);
     }
-    else{
-        cout << "No sys call :(" << endl;
+    sysCallString = command.substr(0, 10);
+    if (compareStrings(sysCallString, CARDCALL)){
+        cout << "Cardinal Call!" << endl;
+        found = true;
+        executeCardCall(command);
+    }
+    if (found == false){
+            cout << "No sys call" << endl;
+            return 1;
     }
     return 0;
 }
