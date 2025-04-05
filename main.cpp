@@ -20,7 +20,6 @@ using namespace std;
 int executeCommand(string&);
 
 
-
 //Main
 int main(){
 
@@ -64,18 +63,16 @@ int executeCommand(string& command){
     sysCallString = command.substr(0, 12);
     //Comparisons
     if (compareStrings(sysCallString, SYSCALL)){
-        cout << "System Call!!!" << endl;
         found = true;
         executeSysCall(command);
     }
     sysCallString = command.substr(0, 10);
     if (compareStrings(sysCallString, CARDCALL)){
-        cout << "Cardinal Call!" << endl;
         found = true;
         executeCardCall(command);
     }
     if (found == false){
-            cout << "No sys call" << endl;
+            cerr << "No Call Found." << endl;
             return 1;
     }
     return 0;

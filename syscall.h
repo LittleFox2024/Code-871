@@ -47,7 +47,7 @@ int executeSysCall(string& fullCommand){
         //Generate Element
         found = true;
         cout << "Generating..." << endl;
-        startPosition = 21;
+        startPosition = 22;
         commandToSend = fullCommand.substr(startPosition, length);
         generateElement(commandToSend);
     }
@@ -57,14 +57,16 @@ int executeSysCall(string& fullCommand){
         //Destroy Element
         found = true;
         cout << "Destroying..." << endl;
-        startPosition = 20;
+        startPosition = 21;
+        commandToSend = fullCommand.substr(startPosition, length);
+        cout << commandToSend;
     }
     
     if(compareStrings(toCompare, constExec)){
         //Execute Element
         found = true;
         cout << "Executing..." << endl;
-        startPosition = 20;
+        startPosition = 21;
         commandToSend = fullCommand.substr(startPosition, length);
         executeElement(commandToSend);
     }
@@ -72,8 +74,15 @@ int executeSysCall(string& fullCommand){
     if(compareStrings(toCompare, constIn)){
         //Inspect List
         found = true;
-        cout << "Inspecting..." << endl;
-        startPosition = 20;
+        startPosition = 21;
+        string constExact = "system call: inspect";
+        if (!compareStrings(fullCommand, constExact)){
+            commandToSend = fullCommand.substr(startPosition, length);
+            inspectElement(commandToSend);
+        }
+        else {
+            cout << "Nothing to inspect." << endl;
+        }
     }
     
     toCompare = fullCommand.substr(13, 16);
@@ -99,5 +108,5 @@ int enhanceArmament(string& commandToSend){
 }
 
 void code871(){
-    cout << "SYSTEM ALERT! CODE 871!" << endl;
+    cerr << "SYSTEM ALERT! CODE 871!" << endl;
 }
