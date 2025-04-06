@@ -1,6 +1,9 @@
 # Code-871
 Creating the “System Call” shell as seen in Sword Art Online: Alicization.
 
+# What's the Point of This?
+As of now, there is no real reason to use this. In fact, it will likely be inefficient for anything real. However, it would be fun if it could eventually be hooked up to a speech-to-text program. Now, I have no idea how to make one, and hooking an existing one might not format it right. However, that's the ultimate goal.
+
 # Usage
 Type "System Call:" then one of the following: generate, destroy, inspect, execute, or enhance armament. A list of options is available with `System Call: Inspect Entire List`.
 
