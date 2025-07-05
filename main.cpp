@@ -26,8 +26,10 @@ int main(){
     //Welcome
     cout << "Welcome to the Underworld!" << endl;
     while(true){
+        
         //Variables
         string inputCommand = "";
+
         //Constants
         string exitCommand = "exit";
         string exactMatch = "System Call:";
@@ -56,11 +58,14 @@ int executeCommand(string& command){
     //Create string for comparison
     string sysCallString;
     bool found = false;
+
     //Strings to compare
     string SYSCALL = "System Call:";
     string CARDCALL = "Cardinal::";
+
     //Get substring
     sysCallString = command.substr(0, 12);
+
     //Comparisons
     if (compareStrings(sysCallString, SYSCALL)){
         found = true;
